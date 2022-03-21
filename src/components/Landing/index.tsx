@@ -97,7 +97,7 @@ export default function Landing() {
                 }}
               >
                 <BigHeader
-                  text={t`Community funding for people and projects`}
+                  text={t`Community funding for people and projects----`}
                 />
                 <div
                   style={{
