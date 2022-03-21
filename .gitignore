@@ -10,7 +10,7 @@ dist
 
 # misc
 .DS_Store
-.env*
+# .env*
 .rinkeby.env
 .kovan.env
 .eslintcache*
