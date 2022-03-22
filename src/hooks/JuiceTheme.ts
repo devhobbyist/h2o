@@ -23,7 +23,8 @@ export function useJuiceTheme(
   storageKey: string = 'jb_theme',
 ): ThemeContextType {
   const initialThemeOption =
-    (localStorage.getItem(storageKey) as ThemeOption) || ThemeOption.light
+    // 获取本地主题 默认为黑夜主题
+    (localStorage.getItem(storageKey) as ThemeOption) || ThemeOption.dark
 
   const [currentThemeOption, setCurrentThemeOption] =
     useState<ThemeOption>(initialThemeOption)

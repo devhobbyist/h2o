@@ -10,7 +10,7 @@ dist
 
 # misc
 .DS_Store
-# .env*
+.env*
 .rinkeby.env
 .kovan.env
 .eslintcache*
@@ -25,7 +25,7 @@ yarn-error.log*
 mnemonic.txt
 
 # i18n
-src/locales/**/*.js
+# src/locales/**/*.js
 
 # compiled artifacts
 src/styles/antd.css

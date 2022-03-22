@@ -91,11 +91,11 @@ export function TopLeftNavItems({
         </a>
       )}
       <NavMenuItem
-        text={t`Projects`}
+        text={t`WTR2`}
         onClick={onClickMenuItems}
         route="/#/projects"
       />
-      <NavMenuItem
+      {/* <NavMenuItem
         text={t`FAQ`}
         route={undefined}
         onClick={() => {
@@ -107,7 +107,7 @@ export function TopLeftNavItems({
               ?.scrollIntoView({ behavior: 'smooth' })
           }, 0)
         }}
-      />
+      /> */}
       <NavMenuItem
         text={t`Discord`}
         onClick={onClickMenuItems}

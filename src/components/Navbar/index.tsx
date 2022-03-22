@@ -17,7 +17,8 @@ export default function Navbar() {
 
       <Space size="middle" style={{ ...topRightNavStyles }}>
         <NavLanguageSelector />
-        <ThemePicker />
+        {/* 主题切换组件 */}
+        {/* <ThemePicker /> */}
         <Account />
       </Space>
     </Header>

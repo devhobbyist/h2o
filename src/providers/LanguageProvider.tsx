@@ -7,7 +7,7 @@ import {
 } from '@lingui/detect-locale'
 import { I18nProvider } from '@lingui/react'
 import { ReactNode, useEffect } from 'react'
-import { en, zh, ru, tr, es, pt } from 'make-plural/plurals'
+import { en, zh, de } from 'make-plural/plurals'
 import defaultLocale from 'locales/en/messages'
 
 import { SUPPORTED_LOCALES, DEFAULT_LOCALE } from 'constants/locale'
@@ -16,10 +16,7 @@ import { SUPPORTED_LOCALES, DEFAULT_LOCALE } from 'constants/locale'
 i18n.loadLocaleData({
   en: { plurals: en },
   zh: { plurals: zh },
-  ru: { plurals: ru },
-  tr: { plurals: tr },
-  pt: { plurals: pt },
-  es: { plurals: es },
+  de: { plurals: de },
 })
 
 const getLocale = (): string => {

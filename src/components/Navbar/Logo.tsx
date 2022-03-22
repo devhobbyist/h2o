@@ -16,11 +16,11 @@ export default function Logo({ height }: { height?: number }) {
       src={
         forThemeOption &&
         forThemeOption({
-          [ThemeOption.light]: '/assets/juice_logo-ol.png',
-          [ThemeOption.dark]: '/assets/juice_logo-od.png',
+          [ThemeOption.light]: '/assets/index/pc/logo.png',
+          [ThemeOption.dark]: '/assets/index/pc/logo.png',
         })
       }
-      alt="Juicebox logo"
+      alt="h2o logo"
     />
   )
 }

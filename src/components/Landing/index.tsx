@@ -58,7 +58,7 @@ function scrollToCreate() {
 export default function Landing() {
   const { theme, forThemeOption } = useContext(ThemeContext)
   const colors = theme.colors
-  const totalMaxWidth = 1080
+  const totalMaxWidth = 1180 // PC最大宽度
 
   const { data: previewProjects } = useProjectsQuery({
     pageSize: 4,
@@ -97,8 +97,9 @@ export default function Landing() {
                 }}
               >
                 <BigHeader
-                  text={t`Community funding for people and projects--||--`}
+                  text={t`Community funding for people and projects`}
                 />
+                <Trans>test.test</Trans>
                 <div
                   style={{
                     fontWeight: 500,
