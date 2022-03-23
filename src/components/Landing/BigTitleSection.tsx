@@ -102,9 +102,9 @@ export default function BigTitleSection() {
           supported by content and funding from users around the world.
         </p>
         {/* 按钮 */}
-        <div style={publishBtn}>
+        {/* <div style={publishBtn}>
           <Trans>Publish the project</Trans>
-        </div>
+        </div> */}
       </div>
     </section>
   )
