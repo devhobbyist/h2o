@@ -9,7 +9,7 @@ import { Dropdown, Menu } from 'antd'
 
 import EtherscanLink from 'components/shared/EtherscanLink'
 import CopyTextButton from 'components/shared/CopyTextButton'
-import useMobile from 'hooks/Mobile'
+import { useMobile } from 'hooks/Mobile'
 
 import Balance from './Balance'
 

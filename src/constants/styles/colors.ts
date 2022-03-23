@@ -15,6 +15,7 @@ export const lightColors = {
   green: 'green',
   red: 'tomato',
   yellow: '#d8aa01',
+  homebg: '#000', // 首页背景
 }
 
 export const darkColors = {
@@ -37,4 +38,5 @@ export const darkColors = {
   green: '#159e40',
   red: 'tomato',
   yellow: '#e7d82a',
+  homebg: '#000',
 }

@@ -31,6 +31,10 @@ function useMedia(query: string, defaultState: boolean = false) {
   return state
 }
 
-export default function useMobile() {
+export function useMobile() {
   return useMedia('(max-width: 767px)')
+}
+
+export function useMd() {
+  return useMedia('(max-width: 1067px)')
 }

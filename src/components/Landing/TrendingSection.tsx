@@ -7,7 +7,7 @@ import TrendingProjects from 'components/Projects/TrendingProjects'
 import RankingExplanation from 'components/Projects/RankingExplanation'
 import { Trans } from '@lingui/macro'
 
-import useMobile from 'hooks/Mobile'
+import { useMobile } from 'hooks/Mobile'
 
 export default function TrendingSection() {
   const {

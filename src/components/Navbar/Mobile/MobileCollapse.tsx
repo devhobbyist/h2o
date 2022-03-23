@@ -17,7 +17,7 @@ import Logo from '../Logo'
 import Account from '../Account'
 import NavLanguageSelector from '../NavLanguageSelector'
 import { TopLeftNavItems } from '../MenuItems'
-import ThemePickerMobile from './ThemePickerMobile'
+// import ThemePickerMobile from './ThemePickerMobile'
 import { topNavStyles } from '../navStyles'
 import ResourcesDropdownMobile from './ResourcesDropdownMobile'
 
@@ -59,6 +59,12 @@ export default function MobileCollapse() {
           showArrow={false}
           header={
             <Space
+              style={{
+                width: '100%',
+                padding: '10px 0 0',
+                display: 'flex',
+                justifyContent: 'space-between',
+              }}
               onClick={e => {
                 setActiveKey(isNavOpen ? undefined : 0)
                 e.stopPropagation()
@@ -67,14 +73,17 @@ export default function MobileCollapse() {
               <a href="/" style={{ display: 'inline-block' }}>
                 {<Logo height={30} />}
               </a>
-              <MenuOutlined
-                style={{
-                  color: colors.icon.primary,
-                  fontSize: 20,
-                  paddingTop: 6,
-                  paddingLeft: 10,
-                }}
-              />
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <Account />
+                <MenuOutlined
+                  style={{
+                    color: colors.icon.primary,
+                    fontSize: 20,
+                    paddingTop: 6,
+                    paddingLeft: 10,
+                  }}
+                />
+              </div>
             </Space>
           }
         >
@@ -89,9 +98,9 @@ export default function MobileCollapse() {
             <Menu.Item key="language-selector">
               <NavLanguageSelector mobile />
             </Menu.Item>
-            <Menu.Item key="theme-picker">
+            {/* <Menu.Item key="theme-picker">
               <ThemePickerMobile />
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item key="feedback">
               <FeedbackFormButton mobile />
             </Menu.Item>
@@ -103,7 +112,7 @@ export default function MobileCollapse() {
               alignItems: 'center',
             }}
           >
-            <Account />
+            {/* <Account /> */}
             {signingProvider ? (
               <Button onClick={onLogOut} style={{ marginTop: 10 }}>
                 <Trans>Disconnect</Trans>

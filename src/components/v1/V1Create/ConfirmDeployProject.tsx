@@ -12,7 +12,7 @@ import {
   useAppSelector,
   useEditingV1FundingCycleSelector,
 } from 'hooks/AppSelector'
-import useMobile from 'hooks/Mobile'
+import { useMobile } from 'hooks/Mobile'
 
 import { useTerminalFee } from 'hooks/v1/TerminalFee'
 import { V1CurrencyOption } from 'models/v1/currencyOption'

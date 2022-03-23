@@ -1,5 +1,1 @@
-/*eslint-disable*/ module.exports = {
-  messages: {
-    'test.test': 'testde',
-  },
-}
+/*eslint-disable*/ module.exports = { messages: {} }

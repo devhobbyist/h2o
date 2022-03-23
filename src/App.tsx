@@ -7,7 +7,7 @@ import { useContext, useLayoutEffect, useState } from 'react'
 
 import Navbar from 'components/Navbar'
 
-import useMobile from 'hooks/Mobile'
+import { useMobile } from 'hooks/Mobile'
 
 import { readNetwork } from 'constants/networks'
 

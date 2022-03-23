@@ -1,63 +1,72 @@
-import { ThemeContext } from 'contexts/themeContext'
-import { useContext } from 'react'
 import { CSSProperties } from 'react'
-
-import { Languages } from 'constants/languages/language-options'
+import { useMobile } from 'hooks/Mobile'
 
 export default function Footer() {
-  const { colors } = useContext(ThemeContext).theme
-
-  const footerLinksStyles: CSSProperties = {
-    display: 'grid',
-    rowGap: 10,
+  const isMobile = useMobile() // 是否是移动端
+  const footerBox: CSSProperties = {
+    maxWidth: 1400,
+    margin: '0 auto',
+    padding: '50px 40px',
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: !isMobile ? 'row' : 'column',
+    justifyContent: !isMobile ? 'space-between' : 'center',
+  }
+  const main: CSSProperties = {
+    padding: '10px 0',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: !isMobile ? 'flex-start' : 'center',
     justifyContent: 'center',
-    marginBottom: 30,
   }
-
-  const link = (text: string, link?: string) => (
-    <a
-      style={{
-        color: colors.text.action.primary,
-        marginLeft: 10,
-        marginRight: 10,
-      }}
-      href={link}
-    >
-      {text}
-    </a>
-  )
-
-  // Renders language links
-  const languageLink = (lang: string) => (
-    <span key={lang} onClick={() => setLanguage(lang)}>
-      {link(Languages[lang].long)}
-    </span>
-  )
-
-  // Sets the new language with localStorage and reloads the page
-  const setLanguage = (newLanguage: string) => {
-    localStorage.setItem('lang', newLanguage)
-    window.location.reload()
-    window.scrollTo(0, 0) // scroll to top of page after reload
+  const contact: CSSProperties = {
+    display: 'flex',
+    fontSize: 15,
+    fontWeight: 400,
+    color: '#FFF',
   }
+  const contacts = [
+    {
+      label: 'Discord',
+      logo: '/assets/bolt.png',
+      link: 'https://baidu.ccom',
+    },
+    {
+      label: 'Twitter',
+      logo: '/assets/bolt.png',
+      link: 'https://twitter.ccom',
+    },
+  ]
 
   return (
-    <div
-      style={{
-        display: 'grid',
-        rowGap: 20,
-        padding: 30,
-        background: 'black',
-        textAlign: 'center',
-      }}
-    >
-      <div style={footerLinksStyles}>
-        {Object.keys(Languages).map(languageLink)}
+    <div style={footerBox}>
+      <div style={main}>
+        <img
+          style={{ width: '100px' }}
+          src="/assets/index/pc/logo.png"
+          alt=""
+        />
+        <p style={{ margin: '10px 0 0' }}>
+          Copyright © 2022 H₂O. All rights reserved.
+        </p>
       </div>
-      <div style={{ ...footerLinksStyles, display: 'flex' }}>
-        {link('Discord', 'https://discord.gg/6jXrJSyDFf')}
-        {link('GitHub', 'https://github.com/jbx-protocol/juice-interface')}
-        {link('Twitter', 'https://twitter.com/juiceboxETH')}
+      <div>
+        <div style={contact}>
+          {contacts.map((data, i) => (
+            <div
+              key={i}
+              style={{ cursor: 'pointer', marginRight: 20 }}
+              onClick={() => window.open(data.link)}
+            >
+              <img
+                style={{ height: 20, marginRight: 7 }}
+                src={data.logo}
+                alt=""
+              />
+              <span>{data.label}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )

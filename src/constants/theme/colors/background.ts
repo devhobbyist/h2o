@@ -26,7 +26,8 @@ export const backgroundColors: Record<
     },
   },
   [ThemeOption.dark]: {
-    l0: darkColors.dark0,
+    // l0: darkColors.dark0,
+    l0: darkColors.homebg,
     l1: darkColors.dark1,
     l2: darkColors.dark2,
     disabled: darkColors.light0 + '44',

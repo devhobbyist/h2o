@@ -1,11 +1,11 @@
 {
-  "short_name": "Juicebox",
-  "name": "Juicebox",
+  "short_name": "H2O",
+  "name": "H2O",
   "description": "Community funding for people and projects.",
   "iconPath": "android-chrome-144x144.png",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "favicon.jpg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
