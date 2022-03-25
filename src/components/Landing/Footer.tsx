@@ -1,6 +1,8 @@
 import { CSSProperties } from 'react'
 import { useMobile } from 'hooks/Mobile'
 
+import '../../styles/footer.scss'
+
 export default function Footer() {
   const isMobile = useMobile() // 是否是移动端
   const footerBox: CSSProperties = {
@@ -55,7 +57,7 @@ export default function Footer() {
           {contacts.map((data, i) => (
             <div
               key={i}
-              style={{ cursor: 'pointer', marginRight: 20 }}
+              className="contactsItem"
               onClick={() => window.open(data.link)}
             >
               <img

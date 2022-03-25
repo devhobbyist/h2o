@@ -10,7 +10,8 @@ dist
 
 # misc
 .DS_Store
-.env*
+# .env*
+# .env.development*
 .rinkeby.env
 .kovan.env
 .eslintcache*
@@ -29,3 +30,6 @@ mnemonic.txt
 
 # compiled artifacts
 src/styles/antd.css
+
+
+learn.md

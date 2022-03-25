@@ -28,11 +28,11 @@ export default function Footer() {
   )
 
   // Renders language links
-  const languageLink = (lang: string) => (
-    <span key={lang} onClick={() => setLanguage(lang)}>
-      {link(Languages[lang].long)}
-    </span>
-  )
+  // const languageLink = (lang: string) => (
+  //   <span key={lang} onClick={() => setLanguage(lang)}>
+  //     {link(Languages[lang].long)}
+  //   </span>
+  // )
 
   // Sets the new language with localStorage and reloads the page
   const setLanguage = (newLanguage: string) => {
@@ -52,7 +52,15 @@ export default function Footer() {
       }}
     >
       <div style={footerLinksStyles}>
-        {Object.keys(Languages).map(languageLink)}
+        {/* {Object.keys(Languages).map(languageLink)} */}
+        {Object.keys(Languages).map((data, i) => (
+          <span key={i} onClick={() => setLanguage(data)}>
+            {Languages[data].long}
+          </span>
+          // <span key={lang} onClick={() => setLanguage(lang)}>
+          //   {link(Languages[lang].long)}
+          // </span>
+        ))}
       </div>
       <div style={{ ...footerLinksStyles, display: 'flex' }}>
         {link('Discord', 'https://discord.gg/6jXrJSyDFf')}
